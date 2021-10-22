@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 
+
 const AddTask = ({ onAdd }) => {
     const [text, setText] = useState('')
     const [day, setDay] = useState('')
@@ -20,6 +21,10 @@ const AddTask = ({ onAdd }) => {
         setDay('')
         setReminder(false)
     }
+
+    // const handelDateChange = (date) => {
+    //     setdatetime(date)
+    // }
     return (
         <form className="add-form"
         onSubmit={onSubmit}>
@@ -42,7 +47,8 @@ const AddTask = ({ onAdd }) => {
                 <input type="checkbox"
                 checked={reminder}
                 value={reminder}
-                onChange={(e) => setReminder(e.currentTarget.checked)} />
+                onChange={(e) => setReminder(e.currentTarget.checked)}
+                />
             </div>
             <input type="submit" value="Save Task"
             className="btn btn-block" />
